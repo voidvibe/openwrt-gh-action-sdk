@@ -28,7 +28,7 @@ jobs:
           ARTIFACTS_DIR: ${{ github.workspace }}/artifacts
           FEED_DIR: ${{ github.workspace }}/feed
           NO_DEFAULT_FEEDS: 1
-          EXTRA_FEEDS: src-git|packages|https://git.openwrt.org/project/omcproxy.git^75a3b870cace1171faf57bd55e5a9a2f1564f757
+          EXTRA_FEEDS: src-git|packages|https://git.openwrt.org/feed/packages.git;openwrt-23.05
           PACKAGES: omcproxy
 
       - name: Store packages
