@@ -35,17 +35,6 @@ jobs:
           name: ${{ matrix.arch }}-${{ matrix.release }}-packages
           path: |
             bin/packages/${{ matrix.arch }}/packages/*.[ai]pk
-            bin/packages/${{ matrix.arch }}-${{ matrix.release }}/packages/*.[ai]pk
-            bin/packages/${{ matrix.arch }}/*.[ai]pk
-            bin/packages/${{ matrix.arch }}-${{ matrix.release }}/*.[ai]pk
-            bin/${{ matrix.arch }}/packages/*.[ai]pk
-            bin/${{ matrix.arch }}-${{ matrix.release }}/packages/*.[ai]pk
-            bin/${{ matrix.arch }}/*.[ai]pk
-            bin/${{ matrix.arch }}-${{ matrix.release }}/*.[ai]pk
-            ${{ github.workspace }}/artifacts/*.[ai]pk
-            ${{ github.workspace }}/artifacts/bin/*.[ai]pk
-            ${{ github.workspace }}/artifacts/bin/${{ matrix.arch }}/*.[ai]pk
-            ${{ github.workspace }}/artifacts/bin/${{ matrix.arch }}-${{ matrix.release }}/*.[ai]pk
-            ${{ github.workspace }}/artifacts/**/*.[ai]pk
+            ${{ github.workspace }}/artifacts/bin/**/*.[ai]pk
           if-no-files-found: ignore
           overwrite: true
