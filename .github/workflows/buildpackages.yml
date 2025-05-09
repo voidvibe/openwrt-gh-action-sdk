@@ -39,5 +39,10 @@ jobs:
             bin/packages/${{ matrix.arch }}/packages/*.[ai]pk
             ${{ github.workspace }}/artifacts/bin/**/*.[ai]pk
             feed/*
+            feeds/*
+            /feed/*
+            /feeds/*
+            ${{ github.workspace }}/feed/*
+            ${{ github.workspace }}/feeds/*
           if-no-files-found: ignore
           overwrite: true
