@@ -28,7 +28,7 @@ jobs:
           ARTIFACTS_DIR: ${{ github.workspace }}/artifacts
           FEED_DIR: ${{ github.workspace }}/feed
           #NO_DEFAULT_FEEDS: 1
-          #EXTRA_FEEDS: src-link|local|${{ github.workspace }}/feed.conf
+          EXTRA_FEEDS: src-git|omc|https://github.com/openwrt/openwrt/tree/main/package/network/services
           PACKAGES: omcproxy
 
       - name: Store packages
@@ -38,11 +38,5 @@ jobs:
           path: |
             bin/packages/${{ matrix.arch }}/packages/*.[ai]pk
             ${{ github.workspace }}/artifacts/bin/**/*.[ai]pk
-            feed/*
-            feeds/*
-            /feed/*
-            /feeds/*
-            ${{ github.workspace }}/feed/*
-            ${{ github.workspace }}/feeds/*
-          if-no-files-found: ignore
+          #if-no-files-found: ignore
           overwrite: true
