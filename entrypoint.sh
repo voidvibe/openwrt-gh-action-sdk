@@ -105,7 +105,7 @@ else
 		make \
 			BUILD_LOG="$BUILD_LOG" \
 			IGNORE_ERRORS="$IGNORE_ERRORS" \
-			"package/$PKG/check" V=s 2>&1 | \
+			"package/$PKG/check" V=s FIXUP=1 2>&1 | \
 				tee logtmp
 		endgroup
 
